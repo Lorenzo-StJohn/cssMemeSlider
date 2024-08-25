@@ -1,0 +1,186 @@
+@font-face {
+    font-family: Beyonders;
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.cdnfonts.com/s/107503/Beyonders-6YoJM.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Smooch Sans';
+    font-style: normal;
+    font-weight: 100;
+    src: url('https://fonts.cdnfonts.com/s/107428/SmoochSans[wght].woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, hsl(298 97.4% 45.3%), hsl(252 91.1% 48.4%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-heading {
+    margin-top: 1vw;
+    font-family: Beyonders;
+    font-size: 4vw;
+    font-weight: 400;
+    color: hsl(298 97.4% 45.3%);
+    text-shadow: 0rem 0rem 2rem hsl(252 91.1% 48.4% / 0.67);
+    @media (max-width: 500px) {
+        font-size: 5vw;
+    }
+}
+
+.header-text {
+    font-family: 'Smooch Sans';
+    font-weight: 100;
+    color: hsl(0 0% 100% / 0.6);
+    font-size: 1.2vw;
+    letter-spacing: 0.6vw;
+    margin-bottom: 1.5vw;
+    @media (max-width: 500px) {
+        font-size: 3.4vw;
+    }
+}
+
+.slider {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.slider-wrapper {
+    background-color: hsl(0 0% 17% / 0.9);
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 40vw;
+    padding: 1.5vw;
+    border-radius: 1vw;
+    color: white;
+    @media (max-width: 500px) {
+        height: 80vw;
+    }
+}
+
+.slider-content {
+    display: flex;
+    flex-direction: column;
+}
+.slider-content input {
+    display: none;
+}
+
+.slider-images {
+    background: linear-gradient(315deg, hsl(298 97.4% 45.3%), hsl(252 91.1% 48.4%));
+    border-radius: 1vw;
+    flex: 0 0 27vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-image {
+    background-color: hsl(0 0% 17% / 0.9);
+    width: 74vw;
+    height: 25vw;
+    border-radius: 1vw;
+    display: none;
+}
+
+
+#slider-radio0:checked ~ .slider-images > #slider-image0,
+#slider-radio1:checked ~ .slider-images > #slider-image1,
+#slider-radio2:checked ~ .slider-images > #slider-image2, 
+#slider-radio3:checked ~ .slider-images > #slider-image3,
+#slider-radio4:checked ~ .slider-images > #slider-image4,
+#slider-radio5:checked ~ .slider-images > #slider-image5,
+#slider-radio6:checked ~ .slider-images > #slider-image6,
+#slider-radio7:checked ~ .slider-images > #slider-image7,
+#slider-radio8:checked ~ .slider-images > #slider-image8  {
+    display: block;
+}
+
+.slider-empty-space {
+    flex: 0 0 2vw;
+}
+
+.slider-bottom {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 500px) {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+}
+
+.slider-bottom .slider-empty-space {
+    display: none;
+    flex: 0 0 77vw;
+    @media (max-width: 500px) {
+        display: block;
+        height: 2vw;
+    }
+}
+
+.slider-text {
+    background: linear-gradient(315deg, hsl(298 97.4% 45.3%), hsl(252 91.1% 48.4%));
+    padding: 1vw;
+    border-radius: 1vw;
+    flex: 0 0 50vw;
+    height: 8vw;
+    @media (max-width: 500px) {
+        flex: 0 0 77vw;
+        height: 23vw;
+    }
+}
+
+.slider-controls label{
+    cursor: pointer;
+}
+
+.slider-paragraph {
+    display: none;
+    background-color: hsl(0 0% 17% / 0.9);
+    border-radius: 1vw;
+    padding: 1vw;
+}
+
+#slider-radio0:checked ~ .slider-bottom > .slider-text > #slider-paragraph0,
+#slider-radio1:checked ~ .slider-bottom > .slider-text > #slider-paragraph1,
+#slider-radio2:checked ~ .slider-bottom > .slider-text > #slider-paragraph2,
+#slider-radio3:checked ~ .slider-bottom > .slider-text > #slider-paragraph3,
+#slider-radio4:checked ~ .slider-bottom > .slider-text > #slider-paragraph4,
+#slider-radio5:checked ~ .slider-bottom > .slider-text > #slider-paragraph5,
+#slider-radio6:checked ~ .slider-bottom > .slider-text > #slider-paragraph6,
+#slider-radio7:checked ~ .slider-bottom > .slider-text > #slider-paragraph7,
+#slider-radio8:checked ~ .slider-bottom > .slider-text > #slider-paragraph8  {
+    display: block;
+}
+
+
+.footer-text {
+    font-family: 'Smooch Sans';
+    font-weight: 100;
+    color: hsl(0 0% 100% / 0.85);
+    font-size: 0.6rem;
+    letter-spacing: 0.9rem;
+    padding: 1vw;
+    @media (max-width: 500px) {
+        letter-spacing: 0.2rem;
+    }
+}
