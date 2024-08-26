@@ -39,7 +39,7 @@ body {
     font-weight: 400;
     color: hsl(298 97.4% 45.3%);
     text-shadow: 0rem 0rem 2rem hsl(252 91.1% 48.4% / 0.67);
-    @media (max-width: 500px) {
+    @media (max-width: 720px) {
         font-size: 5vw;
     }
 }
@@ -51,7 +51,7 @@ body {
     font-size: 1.2vw;
     letter-spacing: 0.6vw;
     margin-bottom: 1.5vw;
-    @media (max-width: 500px) {
+    @media (max-width: 720px) {
         font-size: 3.4vw;
     }
 }
@@ -67,12 +67,12 @@ body {
     display: flex;
     flex-direction: column;
     width: 80vw;
-    height: 40vw;
+    height: 39.5vw;
     padding: 1.5vw;
     border-radius: 1vw;
     color: white;
-    @media (max-width: 500px) {
-        height: 80vw;
+    @media (max-width: 720px) {
+        height: 63.5vw;
     }
 }
 
@@ -96,7 +96,7 @@ body {
 
 .slider-image {
     background-color: hsl(0 0% 17% / 0.9);
-    width: 74vw;
+    width: 75vw;
     height: 25vw;
     border-radius: 1vw;
     display: none;
@@ -122,7 +122,7 @@ body {
 .slider-bottom {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 500px) {
+    @media (max-width: 720px) {
         flex-wrap: wrap-reverse;
         justify-content: center;
     }
@@ -131,7 +131,7 @@ body {
 .slider-bottom .slider-empty-space {
     display: none;
     flex: 0 0 77vw;
-    @media (max-width: 500px) {
+    @media (max-width: 720px) {
         display: block;
         height: 2vw;
     }
@@ -141,16 +141,84 @@ body {
     background: linear-gradient(315deg, hsl(298 97.4% 45.3%), hsl(252 91.1% 48.4%));
     padding: 1vw;
     border-radius: 1vw;
-    flex: 0 0 50vw;
-    height: 8vw;
-    @media (max-width: 500px) {
+    flex: 0 0 69.5vw;
+    height: 7.5vw;
+    @media (max-width: 720px) {
         flex: 0 0 77vw;
-        height: 23vw;
+        height: 27vw;
     }
+}
+
+.slider-controls {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .slider-controls label{
     cursor: pointer;
+}
+
+.slider-radio-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.slider-radio-circle {
+    flex: 0 0 1.3vw;
+    height: 1.3vw;
+    background: hsl(298 97.4% 45.3%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.slider-radio-hole {
+    display: none;
+    flex: 0 0 0.8vw;
+    height: 0.8vw;
+    background-color: hsl(0 0% 17% / 0.9);
+    border-radius: 100%;
+}
+
+#slider-radio0:checked ~ .slider-bottom > .slider-controls > #slider-label0 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
+#slider-radio1:checked ~ .slider-bottom > .slider-controls > #slider-label1 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
+#slider-radio2:checked ~ .slider-bottom > .slider-controls > #slider-label2 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
+#slider-radio3:checked ~ .slider-bottom > .slider-controls > #slider-label3 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
+#slider-radio4:checked ~ .slider-bottom > .slider-controls > #slider-label4 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
+#slider-radio5:checked ~ .slider-bottom > .slider-controls > #slider-label5 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
+#slider-radio6:checked ~ .slider-bottom > .slider-controls > #slider-label6 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
+#slider-radio7:checked ~ .slider-bottom > .slider-controls > #slider-label7 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
+#slider-radio8:checked ~ .slider-bottom > .slider-controls > #slider-label8 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole  {
+    display: block;
+}
+
+#slider-radio0:hover ~ .slider-bottom > .slider-controls > #slider-label0 > .slider-radio-background > .slider-radio-circle,
+#slider-radio1:hover ~ .slider-bottom > .slider-controls > #slider-label1 > .slider-radio-background > .slider-radio-circle,
+#slider-radio2:hover ~ .slider-bottom > .slider-controls > #slider-label2 > .slider-radio-background > .slider-radio-circle,
+#slider-radio3:hover ~ .slider-bottom > .slider-controls > #slider-label3 > .slider-radio-background > .slider-radio-circle,
+#slider-radio4:hover ~ .slider-bottom > .slider-controls > #slider-label4 > .slider-radio-background > .slider-radio-circle,
+#slider-radio5:hover ~ .slider-bottom > .slider-controls > #slider-label5 > .slider-radio-background > .slider-radio-circle,
+#slider-radio6:hover ~ .slider-bottom > .slider-controls > #slider-label6 > .slider-radio-background > .slider-radio-circle,
+#slider-radio7:hover ~ .slider-bottom > .slider-controls > #slider-label7 > .slider-radio-background > .slider-radio-circle,
+#slider-radio8:hover ~ .slider-bottom > .slider-controls > #slider-label8 > .slider-radio-background > .slider-radio-circle {
+    background: hsl(252 91.1% 48.4%);
+}
+
+#slider-radio0:active ~ .slider-bottom > .slider-controls > #slider-label0 > .slider-radio-background > .slider-radio-circle,
+#slider-radio1:active ~ .slider-bottom > .slider-controls > #slider-label1 > .slider-radio-background > .slider-radio-circle,
+#slider-radio2:active ~ .slider-bottom > .slider-controls > #slider-label2 > .slider-radio-background > .slider-radio-circle,
+#slider-radio3:active ~ .slider-bottom > .slider-controls > #slider-label3 > .slider-radio-background > .slider-radio-circle,
+#slider-radio4:active ~ .slider-bottom > .slider-controls > #slider-label4 > .slider-radio-background > .slider-radio-circle,
+#slider-radio5:active ~ .slider-bottom > .slider-controls > #slider-label5 > .slider-radio-background > .slider-radio-circle,
+#slider-radio6:active ~ .slider-bottom > .slider-controls > #slider-label6 > .slider-radio-background > .slider-radio-circle,
+#slider-radio7:active ~ .slider-bottom > .slider-controls > #slider-label7 > .slider-radio-background > .slider-radio-circle,
+#slider-radio8:active ~ .slider-bottom > .slider-controls > #slider-label8 > .slider-radio-background > .slider-radio-circle {
+    background: linear-gradient(315deg, hsl(298 97.4% 45.3%), hsl(252 91.1% 48.4%));
 }
 
 .slider-paragraph {
@@ -180,7 +248,7 @@ body {
     font-size: 0.6rem;
     letter-spacing: 0.9rem;
     padding: 1vw;
-    @media (max-width: 500px) {
+    @media (max-width: 720px) {
         letter-spacing: 0.2rem;
     }
 }
