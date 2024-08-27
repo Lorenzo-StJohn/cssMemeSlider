@@ -77,7 +77,7 @@ body {
     height: 39.5vw;
     padding: 1.5vw;
     border-radius: 1vw;
-    color: #ffffff;
+    color: hsl(0 0% 100%);
     @media (max-width: 720px) {
         height: 63.5vw;
     }
@@ -96,38 +96,64 @@ body {
     background: linear-gradient(315deg, hsl(298 97.4% 45.3%), hsl(252 91.1% 48.4%));
     border-radius: 1vw;
     flex: 0 0 27vw;
+    width: 77vw;
     padding: 1vw;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .slider-image {
     background-color: hsl(0 0% 17% / 0.9);
+    flex: 0 0 0vw;
+    height: 25vw;
+    overflow: hidden;
+    transition: all 2s linear 0s;
+}
+
+.slier-images-container {
     width: 75vw;
     height: 25vw;
     border-radius: 1vw;
-    display: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
 }
 
 .slider-img {
     width: 75vw;
     height: 25vw;
-    border-radius: 1vw;
     object-fit: cover;
+    overflow: hidden;
 }
 
-#slider-radio0:checked ~ .slider-images > #slider-image0,
-#slider-radio1:checked ~ .slider-images > #slider-image1,
-#slider-radio2:checked ~ .slider-images > #slider-image2, 
-#slider-radio3:checked ~ .slider-images > #slider-image3,
-#slider-radio4:checked ~ .slider-images > #slider-image4,
-#slider-radio5:checked ~ .slider-images > #slider-image5,
-#slider-radio6:checked ~ .slider-images > #slider-image6,
-#slider-radio7:checked ~ .slider-images > #slider-image7,
-#slider-radio8:checked ~ .slider-images > #slider-image8  {
-    display: block;
+
+#slider-radio0:checked ~ .slider-images > .slier-images-container > #slider-image0,
+#slider-radio1:checked ~ .slider-images > .slier-images-container > #slider-image1,
+#slider-radio2:checked ~ .slider-images > .slier-images-container > #slider-image2, 
+#slider-radio3:checked ~ .slider-images > .slier-images-container > #slider-image3,
+#slider-radio4:checked ~ .slider-images > .slier-images-container > #slider-image4,
+#slider-radio5:checked ~ .slider-images > .slier-images-container > #slider-image5,
+#slider-radio6:checked ~ .slider-images > .slier-images-container > #slider-image6,
+#slider-radio7:checked ~ .slider-images > .slier-images-container > #slider-image7,
+#slider-radio8:checked ~ .slider-images > .slier-images-container > #slider-image8  {
+    flex: 0 0 75vw;
 }
+
+/*
+#slider-radio0:checked ~ .slider-images > .slier-images-container > #slider-image0 > .slider-img,
+#slider-radio1:checked ~ .slider-images > .slier-images-container > #slider-image1 > .slider-img,
+#slider-radio2:checked ~ .slider-images > .slier-images-container > #slider-image2 > .slider-img, 
+#slider-radio3:checked ~ .slider-images > .slier-images-container > #slider-image3 > .slider-img,
+#slider-radio4:checked ~ .slider-images > .slier-images-container > #slider-image4 > .slider-img,
+#slider-radio5:checked ~ .slider-images > .slier-images-container > #slider-image5 > .slider-img,
+#slider-radio6:checked ~ .slider-images > .slier-images-container > #slider-image6 > .slider-img,
+#slider-radio7:checked ~ .slider-images > .slier-images-container > #slider-image7 > .slider-img,
+#slider-radio8:checked ~ .slider-images > .slier-images-container > #slider-image8 > .slider-img {
+    filter: blur(0);
+}
+*/
 
 .slider-empty-space {
     flex: 0 0 2vw;
@@ -193,11 +219,12 @@ body {
 }
 
 .slider-radio-hole {
-    display: none;
+    opacity: 0;
     flex: 0 0 0.8vw;
     height: 0.8vw;
     background-color: hsl(0 0% 17% / 0.9);
     border-radius: 100%;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 #slider-radio0:checked ~ .slider-bottom > .slider-controls > #slider-label0 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
@@ -209,7 +236,7 @@ body {
 #slider-radio6:checked ~ .slider-bottom > .slider-controls > #slider-label6 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
 #slider-radio7:checked ~ .slider-bottom > .slider-controls > #slider-label7 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole,
 #slider-radio8:checked ~ .slider-bottom > .slider-controls > #slider-label8 > .slider-radio-background > .slider-radio-circle > .slider-radio-hole  {
-    display: block;
+    opacity: 1;
 }
 
 #slider-radio0:hover ~ .slider-bottom > .slider-controls > #slider-label0 > .slider-radio-background > .slider-radio-circle,
