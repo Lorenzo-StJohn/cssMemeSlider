@@ -31,6 +31,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scrollbar-color: hsl(298 97.4% 45.3%) transparent;
+    scrollbar-width: thin;
 }
 
 .header-slider {
