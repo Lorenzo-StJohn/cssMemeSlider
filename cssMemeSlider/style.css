@@ -48,9 +48,6 @@ body {
     font-weight: 400;
     color: hsl(298 97.4% 45.3%);
     text-shadow: 0rem 0rem 2rem hsl(252 91.1% 48.4% / 0.67);
-    @media (max-width: 720px) {
-        font-size: 5vw;
-    }
 }
 
 .header-text {
@@ -60,9 +57,6 @@ body {
     font-size: 1.2vw;
     letter-spacing: 0.6vw;
     margin-bottom: 1.5vw;
-    @media (max-width: 720px) {
-        font-size: 3.4vw;
-    }
 }
 
 .slider {
@@ -80,9 +74,6 @@ body {
     padding: 1.5vw;
     border-radius: 1vw;
     color: hsl(0 0% 100%);
-    @media (max-width: 720px) {
-        height: 63.5vw;
-    }
 }
 
 .slider-content {
@@ -151,19 +142,11 @@ body {
 .slider-bottom {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 720px) {
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-    }
 }
 
 .slider-bottom .slider-empty-space {
     display: none;
     flex: 0 0 77vw;
-    @media (max-width: 720px) {
-        display: block;
-        height: 2vw;
-    }
 }
 
 .slider-controls {
@@ -196,6 +179,7 @@ body {
 }
 
 .slider-radio-hole {
+    display: inline-block;
     opacity: 0;
     flex: 0 0 0.8vw;
     height: 0.8vw;
@@ -250,10 +234,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    @media (max-width: 720px) {
-        flex: 0 0 77vw;
-        height: 27vw;
-    }
 }
 
 .slider-text-container {
@@ -265,11 +245,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    @media (max-width: 720px) {
-        width: 75vw;
-        height: 25vw;
-    }
-    
 }
 
 .slider-paragraph {
@@ -282,15 +257,11 @@ body {
     overflow: hidden;   
     background-color: hsl(0 0% 17% / 0.9);
     font-family: 'Rubik Mono One';
-    letter-spacing: 10%;
     font-size: 0.75rem;
+    letter-spacing: 0.075rem;
     line-height: 1rem;
     color: hsl(0 0% 100% / 0);
     transition: all 2s linear 0s;
-    @media (max-width: 720px) {
-        font-size: 0.8rem;
-        line-height: 1.3rem;
-    }
 }
 
 #slider-radio0:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph0,
@@ -306,9 +277,6 @@ body {
     padding: 1vw;
     flex: 0 0 5.5vw;
     overflow: auto;
-    @media (max-width: 720px) {
-        flex: 0 0 25vw;
-    }
 }
 
 
@@ -319,7 +287,50 @@ body {
     font-size: 0.6rem;
     letter-spacing: 0.9rem;
     padding: 1vw;
-    @media (max-width: 720px) {
+}
+
+@media (max-width: 720px) {
+    .header-heading {
+        font-size: 5vw;
+    }
+    .header-text {
+        font-size: 3.4vw;
+    }
+    .slider-wrapper {
+        height: 63.5vw;
+    }
+    .slider-bottom .slider-empty-space {
+        display: block;
+        height: 2vw;
+    }
+    .slider-bottom {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .slider-text {
+        flex: 0 0 77vw;
+        height: 27vw;
+    }
+    .slider-text-container {
+        width: 75vw;
+        height: 25vw;
+    }
+    .slider-paragraph {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    #slider-radio0:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph0,
+    #slider-radio1:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph1,
+    #slider-radio2:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph2,
+    #slider-radio3:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph3,
+    #slider-radio4:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph4,
+    #slider-radio5:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph5,
+    #slider-radio6:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph6,
+    #slider-radio7:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph7,
+    #slider-radio8:checked ~ .slider-bottom > .slider-text > .slider-text-container > #slider-paragraph8 {
+        flex: 0 0 25vw;
+    }
+    .footer-text {
         letter-spacing: 0.2rem;
     }
 }
